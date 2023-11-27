@@ -65,7 +65,7 @@ function Navbar() {
             {/* {pagesandroutes.map((elem) => ( */}
                 <NavLink route = "/">
               <Button
-                style={{ color: 'black' , display: 'block'  , height: '100%' , innerWidth:"40%"  , width:'40%'}}
+                style={{ color: 'black' , display: 'block'  , height: '100%' , innerWidth:"40%"  , width:'40%' , fontWeight:'bold'}}
                 // sx={{ my: 2, color: 'black' , width:'200%' }}
               >
                home
@@ -77,7 +77,7 @@ function Navbar() {
              
               <NavLink route = "/eqiq">
               <Button
-                style={{ color: 'black' , display: 'block' , height: '100%' }}
+                style={{ color: 'black' , display: 'block' , height: '100%'  , fontWeight:'bold'}}
                 // sx={{ my: 2, color: 'black' , width:'200%'}}
               >
                Eqiq
@@ -85,7 +85,7 @@ function Navbar() {
               </NavLink>
               <NavLink route = "/manifesto">
               <Button
-                style={{ color: 'black' , display: 'block' , height: '100%' }}
+                style={{ color: 'black' , display: 'block' , height: '100%'  , fontWeight:'bold'}}
                 // sx={{ my: 2, color: 'black' , width:'200%'}}
               >
                 Manifesto
@@ -93,7 +93,7 @@ function Navbar() {
               </NavLink>
               <NavLink route = "/task">
               <Button
-                style={{ color: 'black' , display: 'block' , height: '100%' }}
+                style={{ color: 'black' , display: 'block' , height: '100%' , fontWeight:'bold' }}
                 // sx={{ my: 2, color: 'black' , width:'200%'}}
               >
                 Task
@@ -101,10 +101,18 @@ function Navbar() {
               </NavLink>
               <NavLink route = "/emotions">
               <Button
-                style={{ color: 'black' , display: 'block' , height: '100%' }}
+                style={{ color: 'black' , display: 'block' , height: '100%'  , fontWeight:'bold'}}
                 // sx={{ my: 2, color: 'black' , width:'200%'}}
               >
                Emotion
+              </Button>
+              </NavLink>
+              <NavLink route = "/about">
+              <Button
+                style={{ color: 'black' , display: 'block' , height: '100%'  , fontWeight:'bold'}}
+                // sx={{ my: 2, color: 'black' , width:'200%'}}
+              >
+               About
               </Button>
               </NavLink>
           </Box>
@@ -117,18 +125,18 @@ function Navbar() {
               fontSize: "16px",
               cursor: "pointer",
               marginLeft: "20%",
+              
             }}
           >
             Download
           </button>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1  , color:'black'}} />
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 2,
+              mr: 0,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
@@ -139,8 +147,8 @@ function Navbar() {
             }}
           >
             LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          </Typography> */}
+          {/* <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -150,15 +158,15 @@ function Navbar() {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+          <Box sx={{ flexGrow: 0  , marginLeft:'5%'}}>
+            <Tooltip title="Open settings"  >
+              <IconButton  onClick={handleOpenUserMenu} sx={{ p: 0  }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
-            {/* <Menu
+            <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -179,7 +187,7 @@ function Navbar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu> */}
+            </Menu>
           </Box>
         </Toolbar>
       </Container>
