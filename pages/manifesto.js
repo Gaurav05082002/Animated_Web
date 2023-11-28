@@ -42,19 +42,23 @@ export default function Manifesto() {
         x: "random(-50, 10, 5)",
         y: "random(-10,50, 5)",
         repeat: 1,
-        ease: "elastic", //chooses a random number between -100 and 100 for each target, rounding to the closest 5!
+        ease: "elastic", 
       },
       {
         duration: 5,
         x: "random(-40, 10, 5)",
         y: "random(-10, 10, 5)",
         repeat: -1,
-        ease: "elastic", //chooses a random number between -100 and 100 for each target, rounding to the closest 5!
+        ease: "elastic", 
       }
     );
 
     gsap.fromTo(  ".para",    {opacity:0 , duration:1 , ease:'slow' , scale:0.5} , {opacity:1 , duration:1 , ease:'slow' , scale:1} );
   }, []);
+
+
+  
+
 
   return (
     <div

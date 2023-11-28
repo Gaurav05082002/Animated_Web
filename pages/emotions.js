@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import img from 'next/image';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap";
@@ -14,58 +14,13 @@ import Flower1 from "../public/flowe1.jpg";
 import Ava from "../public/avatar.png";
 
 const emotions = () => {
-
-
-  gsap.registerPlugin(ScrollTrigger);
-  function onEnterViewport() {
-    this.setState({
-      visible: true,
-    });
-  }
-
-  function onExitViewport() {
-    this.setState({
-      visible: false,
-    });
-  }
-
- 
+  // gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    
-
-    
-
-
-
-
-
-    gsap.to(".leftBigHeading", {
-      scrollTrigger: ".leftBigHeading",
-      x: 10000,
-    });
-
-    gsap.from(".leftBigHeading", {
-      drawSVG: "0%",
-      ease: "expo.out",
-      scrollTrigger: {
-        trigger: ".leftBigHeading",
-        start: "clamp(top center)",
-        scrub: true,
-        pin: ".pin",
-        pinSpacing: false,
-        markers: true,
-      },
-    });
-
-   
-  
-  // console.log("heyeye" , st.animation); // tween
-
     gsap.fromTo(
       ".leftBigHeading",
-      { x: -500, duration: 1, ease: "elastic", scale: 0.5  },
-      { x: 0, duration: 1, ease: "slow", scale: 1  }
+      { x: -500, duration: 1, ease: "elastic", scale: 0.5 },
+      { x: 0, duration: 1, ease: "slow", scale: 1 }
     );
 
     gsap.fromTo(

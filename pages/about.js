@@ -29,7 +29,7 @@ const about = () => {
         { opacity: 1, duration: 1, ease: "slow", scale: 1 }
       );
 
-    // gsap.fromTo('.signature' , {scale:0.5 , opacity:0} , {opacity:1 ,duration:2,ease:'slow' , scale:1})
+
   }, []);
 
   return (

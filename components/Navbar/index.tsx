@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import NavLinks from "./NavLink";
 import ava from "../../public/mani.jpg";
 import avalogo from "../../public/avalogo.jpg";
-
+import { useEffect, useState } from "react";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -31,11 +31,39 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const [windowWidth, setWindowWidth] = useState(0);
 
-  
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", updateWindowWidth);
+    updateWindowWidth();
+
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []);
+
+  if (windowWidth < 800) {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+          paddingTop: "50vh",
+          color: "black",
+          border: "solid 2px blue",
+          height: "1000vh",
+        }}
+      >
+        currently not available for mobile , Please open on a laptop or monitor.
+      </div>
+    );
+  }
   return (
     <AppBar position="static" style={{ backgroundColor: "white" }}>
-      <Container >
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
@@ -163,13 +191,13 @@ function Navbar() {
               borderRadius: "20px",
               fontSize: "16px",
               cursor: "pointer",
-              marginLeft: "20%",
+              marginLeft: "5%",
             }}
           >
             Download
           </button>
 
-          <Box sx={{ flexGrow: 0, marginLeft: "5%" }}></Box>
+          {/* <Box sx={{ flexGrow: 0, marginLeft: "5%" }}></Box> */}
         </Toolbar>
       </Container>
     </AppBar>

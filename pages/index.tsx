@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Emotions from './emotions'
 import Eiiq from './eqiq'
 import Manifesto from './manifesto'
+import {useEffect , useState} from 'react'
 export default function Home() {
+
   return (
     <>
       <Head>
