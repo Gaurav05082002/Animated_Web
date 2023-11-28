@@ -71,17 +71,17 @@ export default function eqiq() {
             padding: '10px',
           }}
         >
-          {/* Add as many cards as needed */}
+
           <div style={{ minWidth: '300px', flexShrink: 0 , display:'flex' , flexDirection:'row'}}>
-            {/* Card Content */}
+     
             <img src={card1.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
             <img src={card2.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
             <img src={card3.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
             <img src={card4.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
-            <img src={card1.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
-            {/* Card Content */}
+            <img src={card1.src} alt="Description of the image" style={{ width: '80%', height: '80%'  }}/>
+         
           </div>
-          {/* Add more cards as needed */}
+        
         </div>
       </div>
     </div>

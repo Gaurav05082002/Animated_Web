@@ -21,9 +21,9 @@ export const NavLinkContainer = styled.div`
 `
 
 export const NavLink = styled(Link) <{ large?: boolean }>`
-    padding: 1rem;
-    margin-left: 1rem;
-    font-size: ${props => props.large ? '1.5rem' : '1rem'};
+    padding: 0.5px;
+    margin-left: 0.2px;
+    font-size: ${props => props.large ? '0.5px' : '0.5px'};
     color: 'black';
 
     &:hover {
