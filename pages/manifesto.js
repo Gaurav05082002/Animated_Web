@@ -52,6 +52,8 @@ export default function Manifesto() {
         ease: "elastic", //chooses a random number between -100 and 100 for each target, rounding to the closest 5!
       }
     );
+
+    gsap.fromTo(  ".para",    {opacity:0 , duration:1 , ease:'slow' , scale:0.5} , {opacity:1 , duration:1 , ease:'slow' , scale:1} );
   }, []);
 
   return (
@@ -251,25 +253,28 @@ export default function Manifesto() {
         >
           <p
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               textAlign: "left",
               paddingRight: "40px",
-              width: "50%",
+              width: "60%",
               fontWeight: "bold",
+              marginBottom: "10px",
             }}
+            className="para"
           >
             A personalized pocket coach that provides bite-sized, science-driven
             tools to boost emotional intelligence.
           </p>
           <p
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               textAlign: "left",
               paddingRight: "40px",
-              width: "50%",
+              width: "60%",
               fontWeight: "bold",
               marginTop: "10px",
             }}
+            className="para"
           >
             Think of it as a pocket cheerleader towards a better, more
             fulfilling.

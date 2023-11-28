@@ -13,9 +13,9 @@ export default function Home() {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></link>
       </Head>
       <Emotions/>
-      <Eiiq/>
-      <Manifesto/>
-      <Emotions/>
+      {/* <Eiiq/> */}
+      {/* <Manifesto/> */}
+      {/* <Emotions/> */}
       
     </>
   )

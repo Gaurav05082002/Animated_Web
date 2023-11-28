@@ -18,6 +18,10 @@ const about = () => {
         ".textup3",
         { y: 10, duration: 0.5, ease: "elastic", scale: 0.5, opacity: 0 },
         { y: 0, duration: 0.5, ease: "slow", scale: 1, opacity: 1 }
+      ).fromTo(
+        ".textup4",
+        { y: 10, duration: 0.5, ease: "elastic", scale: 0.5, opacity: 0 },
+        { y: 0, duration: 0.5, ease: "slow", scale: 1, opacity: 1 }
       )
       .fromTo(
         ".signature",
@@ -70,7 +74,7 @@ const about = () => {
         style={{ marginBottom: "20px", display: "flex", flexDirection: "row" }}
       >
         {" "}
-        <div>with love</div>{" "}
+        <div className="textup4">with love</div>  
         <img
           className="signature"
           src={Sign.src}

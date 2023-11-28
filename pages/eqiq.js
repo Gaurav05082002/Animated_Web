@@ -9,8 +9,11 @@ import gsap from "gsap";
 export default function eqiq() {
 
     useEffect(() => {  
+           const tl = gsap.timeline();
+        tl.fromTo(".avaimg", {x:500 ,  y: 30, duration: 1, ease: "elastic", scale: 0.5 ,rotate: 270 },
+        { x: 200,y:30 , duration: 1, ease: "smooth", scale: 1 , rotate: 270}, ).fromTo(".avaimg", { x: 200,y:30 , duration: 1, ease: "elastic", scale: 1 ,rotate: 270 },
+        { x: 0,y:0 , duration: 1, ease: "smooth", scale: 1, rotate:360 }, );
 
-        gsap.fromTo(".avaimg", {duration: 2, rotation: 0, transformOrigin: "110px +230px" , opacity:0.2 , scale: 0.1 } , {duration: 1, rotation: 360, transformOrigin: "110px +200px" , opacity:1 , scale: 1 , ease: 'smooth' } );
         gsap.fromTo(
             ".downheading",
             { x: -100, duration: 1.5, ease: "elastic", scale: 0.5 },
